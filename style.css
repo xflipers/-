@@ -466,8 +466,12 @@ figcaption {
 }
 
 .person-card {
+  display: block;
+  width: 100%;
   min-height: 190px;
   border-left: 6px solid var(--green);
+  cursor: pointer;
+  text-align: left;
 }
 
 .person-date {
@@ -493,8 +497,20 @@ figcaption {
 }
 
 .gallery-card figcaption {
+  display: grid;
+  gap: 6px;
   color: var(--ink);
+}
+
+.gallery-card figcaption strong {
   font-weight: 700;
+}
+
+.gallery-card figcaption span {
+  color: var(--red-deep);
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 800;
 }
 
 .sources {
@@ -567,6 +583,68 @@ figcaption {
   object-fit: cover;
   border-radius: 7px;
   margin-bottom: 22px;
+}
+
+.photo-carousel {
+  margin-bottom: 22px;
+}
+
+.carousel-stage {
+  position: relative;
+  overflow: hidden;
+  min-height: 320px;
+  border-radius: 7px;
+  background: #1f1b18;
+}
+
+.carousel-slide {
+  display: none;
+  margin: 0;
+}
+
+.carousel-slide.active {
+  display: block;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: min(380px, 52vh);
+  object-fit: cover;
+}
+
+.carousel-slide figcaption {
+  margin: 0;
+  padding: 10px 12px;
+  color: #fffaf2;
+  background: rgba(31, 27, 24, 0.88);
+}
+
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.carousel-btn {
+  width: 40px;
+  height: 40px;
+  color: #fffaf2;
+  background: var(--green);
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 26px;
+  line-height: 1;
+}
+
+.carousel-counter {
+  min-width: 54px;
+  color: var(--green-deep);
+  font-family: Arial, sans-serif;
+  font-weight: 800;
+  text-align: center;
 }
 
 .modal ul {
