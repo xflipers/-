@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Красный Кремль | История Красной площади</title>
+    <meta
+      name="description"
+      content="Интерактивный сайт об истории Красной площади, памятниках, зданиях, датах и исторических личностях."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Красный Кремль">
+        <span class="brand-mark"></span>
+        <span>Красный Кремль</span>
+      </a>
+      <nav class="main-nav" aria-label="Главная навигация">
+        <a href="#history">История</a>
+        <a href="#landmarks">Памятники</a>
+        <a href="#people">Люди и даты</a>
+        <a href="#gallery">Галерея</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Москва • Кремль • Красная площадь</p>
+          <h1 id="hero-title">Красная площадь: история в камне, башнях и именах</h1>
+          <p>
+            От торгового пространства у кремлёвских стен до главного символа страны:
+            Красная площадь менялась вместе с Москвой и сохранила следы нескольких эпох.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#history">Открыть историю</a>
+            <a class="btn secondary" href="#landmarks">Смотреть объекты</a>
+          </div>
+        </div>
+        <div class="hero-caption">Вид на Кремлёвскую стену и Собор Василия Блаженного</div>
+      </section>
+
+      <section class="intro section-band">
+        <div class="section-inner intro-grid">
+          <div>
+            <p class="eyebrow">Главная идея</p>
+            <h2>Красная площадь как живая летопись Москвы</h2>
+          </div>
+          <p>
+            Сайт устроен как интерактивная экскурсия: нажимайте на эпохи, здания,
+            памятники и фотографии, чтобы раскрывать подробности, связанные даты и
+            исторических личностей.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="history" aria-labelledby="history-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">Временная линия</p>
+            <h2 id="history-title">История становления Красной площади</h2>
+            <p>
+              Каждый отрезок открывает подробности о роли площади, связанных людях,
+              зданиях и событиях.
+            </p>
+          </div>
+          <div class="timeline-layout">
+            <div class="timeline" id="timelineButtons" aria-label="Периоды истории"></div>
+            <article class="detail-panel" id="timelineDetail" aria-live="polite"></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-red" id="landmarks" aria-labelledby="landmarks-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">Объекты площади</p>
+            <h2 id="landmarks-title">Памятники и здания</h2>
+            <p>
+              Нажмите на карточку, чтобы узнать, когда объект появился, зачем он был
+              создан и с какими историческими фигурами связан.
+            </p>
+          </div>
+          <div class="cards-grid" id="landmarkCards"></div>
+        </div>
+      </section>
+
+      <section class="section" id="people" aria-labelledby="people-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">Исторические личности</p>
+            <h2 id="people-title">Люди и даты</h2>
+            <p>
+              Короткие карточки связывают конкретные годы с теми, кто повлиял на
+              образ Красной площади или на события вокруг неё.
+            </p>
+          </div>
+          <div class="people-grid" id="peopleCards"></div>
+        </div>
+      </section>
+
+      <section class="section section-green" id="gallery" aria-labelledby="gallery-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">Галерея</p>
+            <h2 id="gallery-title">Красная площадь в изображениях</h2>
+            <p>Фотографии открываются крупнее с пояснением и привязкой к истории.</p>
+          </div>
+          <div class="gallery-grid" id="galleryGrid"></div>
+        </div>
+      </section>
+
+      <section class="section sources" aria-labelledby="sources-title">
+        <div class="section-inner">
+          <div class="section-heading compact">
+            <p class="eyebrow">Основа материалов</p>
+            <h2 id="sources-title">Источники</h2>
+          </div>
+          <ul>
+            <li><a href="https://whc.unesco.org/en/list/545/" target="_blank" rel="noreferrer">UNESCO: Kremlin and Red Square, Moscow</a></li>
+            <li><a href="https://www.britannica.com/topic/Red-Square" target="_blank" rel="noreferrer">Britannica: Red Square</a></li>
+            <li><a href="https://en.shm.ru/museum/hvb/" target="_blank" rel="noreferrer">Государственный исторический музей: Покровский собор</a></li>
+            <li><a href="https://www.britannica.com/place/Lenin-Mausoleum" target="_blank" rel="noreferrer">Britannica: Lenin Mausoleum</a></li>
+            <li><a href="https://commons.wikimedia.org/" target="_blank" rel="noreferrer">Wikimedia Commons: изображения</a></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Красный Кремль</span>
+      <span>Интерактивная история Красной площади</span>
+    </footer>
+
+    <dialog class="modal" id="infoModal" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Закрыть">×</button>
+      <div class="modal-content" id="modalContent"></div>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
