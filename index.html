@@ -141,5 +141,69 @@
     </dialog>
 
     <script src="script.js?v=20260609"></script>
+    <script>
+      (() => {
+        const timelineUpdates = {
+          xv: {
+            period: "XV век",
+            images: [
+              { file: "Vasnetsov_Moskovsky_Kreml_pri_Ivane_III.jpg", caption: "Кремль при Иване III в реконструкции А. Васнецова" },
+              { file: "Ivan_III_of_Russia.jpg", caption: "Иван III, великий князь московский" },
+              { file: "Kremlin wall - Red Square.jpg", caption: "Кремлёвская стена со стороны площади" },
+              { file: "Vasnetsov_Steny_derevyannogo_goroda.jpg", caption: "Деревянные укрепления старой Москвы в реконструкции А. Васнецова" }
+            ]
+          },
+          xvi: {
+            period: "XVI век",
+            images: [
+              { file: "Ivan_the_Terrible_(cropped).JPG", caption: "Иван IV Грозный" },
+              { file: "Saint-Basil-Cathedral_Moscow.jpg", caption: "Собор Василия Блаженного" },
+              { file: "St._Basil’s_Cathedral_on_Red_Square_in_Moscow.jpg", caption: "Покровский собор на Красной площади" },
+              { file: "Vasnetsov_Moskovsky_zastenok_konets_16_veka-(Konst_Elen_Bashnya)-1912.jpg", caption: "Москва конца XVI века в реконструкции А. Васнецова" }
+            ]
+          },
+          xvii: {
+            period: "XVII век",
+            images: [
+              { file: "Appeal_of_Minin.jpg", caption: "Призыв Минина к нижегородцам" },
+              { file: "Minin_i_Pozharskiy.jpg", caption: "Минин и Пожарский" },
+              { file: "Portrait_of_Mikhail_Fedorovich_Romanov.jpg", caption: "Михаил Фёдорович Романов" },
+              { file: "VasnezovAM 041.jpg", caption: "Красная площадь в XVII веке в исторической реконструкции" }
+            ]
+          },
+          xix: {
+            period: "XIX век",
+            images: [
+              { file: "Nikolskaya Tower, 1812.jpg", caption: "Никольская башня после событий 1812 года" },
+              { file: "The_Red_Square,_Moscow,_Russia_(4600822737).jpg", caption: "Красная площадь около 1880 года" },
+              { file: "Upper_Trading_Rows_(early_1900th).jpg", caption: "Верхние торговые ряды в начале XX века" },
+              { file: "Московский Кремль с Большого каменного моста.jpg", caption: "Вид на Московский Кремль в XIX веке" }
+            ]
+          },
+          xx: {
+            period: "XX век",
+            images: [
+              { file: "Lenin_Mausoleum_by_Isaak_Brodsky_(1924).jpg", caption: "Деревянный мавзолей Ленина, 1924 год" },
+              { file: "Lenin's Mausoleum (19777767158).jpg", caption: "Каменный Мавзолей Ленина" },
+              { file: "Парад_Победы_на_Красной_площади_24_июня_1945_г._(25).jpg", caption: "Парад Победы 24 июня 1945 года" },
+              { file: "Stamp_1925_216.jpg", caption: "Почтовая марка СССР 1925 года с Мавзолеем Ленина" }
+            ]
+          },
+          today: {
+            period: "XX-XXI века",
+            images: [
+              { file: "The_Red_Square_(Красная_площадь)_(5873220702).jpg", caption: "Современная Красная площадь" },
+              { file: "Moscow_State_Historical_Museum_Red_Square.jpg", caption: "Исторический музей и северная часть площади" },
+              { file: "Moscow_Gum_c13.jpg", caption: "ГУМ в современном ансамбле площади" },
+              { file: "7253. Moscow Kremlin.jpg", caption: "Современный вид Московского Кремля" }
+            ]
+          }
+        };
+
+        timeline.forEach((item) => Object.assign(item, timelineUpdates[item.id]));
+        renderTimelineButtons();
+        renderTimelineDetail(timeline[0]);
+      })();
+    </script>
   </body>
 </html>
