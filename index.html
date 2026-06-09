@@ -203,6 +203,95 @@
         timeline.forEach((item) => Object.assign(item, timelineUpdates[item.id]));
         renderTimelineButtons();
         renderTimelineDetail(timeline[0]);
+
+        const galleryPhotoUpdates = [
+          [
+            { file: "Spasskaya Tower, Moscow.jpg", caption: "Спасская башня Московского Кремля" },
+            { file: "Spasskaya Tower (Kremlin).jpg", caption: "Спасская башня со стороны Красной площади" },
+            { file: "The Spasskaya Tower (19341297224).jpg", caption: "Спасская башня и кремлёвская стена" },
+            { file: "Kremlin Spasskaya Tower.jpg", caption: "Вертикальный вид на Спасскую башню" },
+            { file: "Spasskaya tower Moscow Kremlin.jpg", caption: "Спасская башня Московского Кремля, 2007 год" },
+            { file: "Spasskaya Tower Kremlin.JPG", caption: "Спасская башня, вид с Красной площади" },
+            { file: "7067. Spasskaya Tower of Moscow Kremlin.jpg", caption: "Спасская башня как объект культурного наследия" }
+          ],
+          [
+            { file: "Cathedral of Intercession aka Cathedral of St. Basil the Blessed Red Square, Moscow, Russia.jpg", caption: "Покровский собор на Красной площади" },
+            { file: "Detail of the domes of Saint Basil's Cathedral, Moscow, Russia.jpg", caption: "Купола Собора Василия Блаженного" },
+            { file: "Moscow SaintBasilCathedralInterior 001 0873.jpg", caption: "Интерьер Собора Василия Блаженного" },
+            { file: "Saint Basil's Cathedral and the Red Square.jpg", caption: "Собор Василия Блаженного и Красная площадь" },
+            { file: "Собор Василия Блаженного на Красной площади 2023 01.jpg", caption: "Современный вид собора, 2023 год" },
+            { file: "Собор Василия Блаженного на Красной площади 2023 04.jpg", caption: "Ракурс на собор со стороны площади" },
+            { file: "Собор Василия Блаженного (St. Basil Cathedral), Москва 16.jpg", caption: "Фрагменты архитектуры Покровского собора" }
+          ],
+          [
+            { file: "State historical museum, Red Square.jpg", caption: "Государственный исторический музей на Красной площади" },
+            { file: "Moscow State Historical Museum.jpg", caption: "Здание Исторического музея" },
+            { file: "Historical Museum Moscow.jpg", caption: "Фасад Исторического музея" },
+            { file: "Moscow - Moscow State Historical Museum (Red Square).jpg", caption: "Исторический музей со стороны Красной площади" },
+            { file: "State Historical Museum, Red Square (8355833685).jpg", caption: "Краснокирпичный фасад музея" },
+            { file: "Russia 3342 - State Historical Museum (4146976264).jpg", caption: "Исторический музей и вход к Кремлю" },
+            { file: "Здание Государственного исторического музея на Красной площади в Москве, сентябрь 2020.jpg", caption: "Здание музея на Красной площади, сентябрь 2020 года" }
+          ],
+          [
+            { file: "GUM department store.jpg", caption: "Фасад ГУМа со стороны Красной площади" },
+            { file: "00 2921 Moscow GUM.jpg", caption: "ГУМ на Красной площади" },
+            { file: "Moscow. GUM (interior) P4162294 3095.jpg", caption: "Интерьер ГУМа" },
+            { file: "Moscow GUM, Interior, Red Square, Moscow, Russia.jpg", caption: "Внутренняя галерея ГУМа" },
+            { file: "Russia 3329B - GUM (4144288741).jpg", caption: "Восточная сторона Красной площади и ГУМ" },
+            { file: "GUM Department Store (Night), Moskva RUS.jpg", caption: "ГУМ в вечерней подсветке" },
+            { file: "Москва, Красная площадь, ГУМ, последний снег - Moscow, Red Square, gum department store, last snow (16444382098).jpg", caption: "ГУМ и Красная площадь зимой" }
+          ],
+          [
+            { file: "Lenin Mausoleum.jpg", caption: "Мавзолей Ленина у Кремлёвской стены" },
+            { file: "Russia-Moscow-Lenin Mausoleum.jpg", caption: "Мавзолей Ленина на Красной площади" },
+            { file: "Moscow - Lenin's Mausoleum.jpg", caption: "Мавзолей Ленина, вид со стороны площади" },
+            { file: "Red Square Lenin's mausoleum.jpg", caption: "Мавзолей Ленина на фотографии 1989 года" },
+            { file: "Lenin's Mausoleum (19964391515).jpg", caption: "Мавзолей Ленина в ансамбле Красной площади" },
+            { file: "Moscow - Red Square, the Kremlin Wall and Lenin's Mausoleum.jpg", caption: "Кремлёвская стена и Мавзолей Ленина" },
+            { file: "Moscow LeninMausoleum 1547.JPG", caption: "Мавзолей Ленина, вид с площади" }
+          ],
+          [
+            { file: "Polish Mil Victory Parade 1945.jpg", caption: "Представители Войска Польского на Параде Победы, 24 июня 1945 года" },
+            { file: "Captured flags of fascist Wehrmacht in the Victory Parade in Moscow on 24 June 1945.jpg", caption: "Знамёна противника на Параде Победы 1945 года" },
+            { file: "Soldiers with capitulated flags on Victory Parade.jpg", caption: "Солдаты со знамёнами на Параде Победы" },
+            { file: "Парад Победы на Красной площади 24 июня 1945 г. (23).jpg", caption: "Парад Победы на Красной площади, 24 июня 1945 года" },
+            { file: "Парад Победы на Красной площади 24 июня 1945 г. (32).jpg", caption: "Строй участников Парада Победы 1945 года" },
+            { file: "Знаменная группа 2-го Белорусского фронта на Красной площади во время Парада Победы.jpg", caption: "Знамённая группа 2-го Белорусского фронта" },
+            { file: "Parad pobedy 1945.jpg", caption: "Бросание знамён к подножию Мавзолея" }
+          ]
+        ];
+
+        gallery.forEach((item, index) => {
+          item.photos = galleryPhotoUpdates[index];
+        });
+
+        function openGalleryCarousel(item) {
+          modalContent.innerHTML = `
+            ${renderPhotoCarousel(item.photos, item.title)}
+            <p class="eyebrow">${item.date}</p>
+            <h3 id="modalTitle">${item.title}</h3>
+            <p>${item.text}</p>
+            <a class="modal-source" href="${item.source}" target="_blank" rel="noreferrer">Источник изображения или темы</a>
+          `;
+          modal.showModal();
+        }
+
+        galleryGrid.addEventListener("click", (event) => {
+          const card = event.target.closest(".gallery-card");
+          if (!card) return;
+          event.preventDefault();
+          event.stopImmediatePropagation();
+          openGalleryCarousel(gallery[Number(card.dataset.index)]);
+        }, true);
+
+        galleryGrid.addEventListener("keydown", (event) => {
+          if (event.key !== "Enter" && event.key !== " ") return;
+          const card = event.target.closest(".gallery-card");
+          if (!card) return;
+          event.preventDefault();
+          event.stopImmediatePropagation();
+          openGalleryCarousel(gallery[Number(card.dataset.index)]);
+        }, true);
       })();
     </script>
   </body>
